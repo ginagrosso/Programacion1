@@ -74,22 +74,22 @@ public class VentaDeVehiculos {
             switch (opcion) {
                 case 1:
                     System.out.print("\nIngrese el nombre del auto: ");
-                    String nombreAuto = input.next();
-                    AgregarAuto(autos, nombreAuto);
+                    String AutoAgregar = input.next();
+                    AgregarAuto(autos, AutoAgregar);
                     System.out.println("\n¿Desea realizar otra operación (S/N)?");
                     salir = input.next().charAt(0);
                     break;
                 case 2:
                     System.out.print("\nIngrese el nombre del auto que desea buscar: ");
-                    nombreAuto = input.next();
-                    BuscarAuto(autos, nombreAuto);
+                    String AutoBuscar = input.next();
+                    BuscarAuto(autos, AutoBuscar);
                     System.out.println("\n¿Desea realizar otra operación (S/N)?");
                     salir = input.next().charAt(0);
                     break;
                 case 3:
                     System.out.print("\nIngrese el nombre del auto que desea eliminar: ");
-                    nombreAuto = input.next();
-                    EliminarAuto(autos, nombreAuto);
+                    String AutoEliminar = input.next();
+                    EliminarAuto(autos, AutoEliminar);
                     System.out.println("\n¿Desea realizar otra operación (S/N)?");
                     salir = input.next().charAt(0);
                     break;
