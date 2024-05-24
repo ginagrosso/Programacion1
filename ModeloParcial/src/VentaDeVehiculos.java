@@ -67,7 +67,6 @@ public class VentaDeVehiculos {
         autos.add("Fiat");
 
         int opcion;
-        char salir = 'n';
         do {
             MostrarMenu();
             opcion = input.nextInt();
