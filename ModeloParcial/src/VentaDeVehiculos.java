@@ -71,58 +71,47 @@ public class VentaDeVehiculos {
         do {
             MostrarMenu();
             opcion = input.nextInt();
+            input.nextLine();
             switch (opcion) {
                 case 1:
                     System.out.print("\nIngrese el nombre del auto: ");
-                    String AutoAgregar = input.next();
+                    String AutoAgregar = input.nextLine();
                     AgregarAuto(autos, AutoAgregar);
-                    System.out.println("\n¿Desea realizar otra operación (S/N)?");
-                    salir = input.next().charAt(0);
                     break;
                 case 2:
                     System.out.print("\nIngrese el nombre del auto que desea buscar: ");
-                    String AutoBuscar = input.next();
+                    String AutoBuscar = input.nextLine();
                     BuscarAuto(autos, AutoBuscar);
-                    System.out.println("\n¿Desea realizar otra operación (S/N)?");
-                    salir = input.next().charAt(0);
                     break;
                 case 3:
                     System.out.print("\nIngrese el nombre del auto que desea eliminar: ");
-                    String AutoEliminar = input.next();
+                    String AutoEliminar = input.nextLine();
                     EliminarAuto(autos, AutoEliminar);
-                    System.out.println("\n¿Desea realizar otra operación (S/N)?");
-                    salir = input.next().charAt(0);
                     break;
                 case 4:
                     ListarAutos(autos);
-                    System.out.println("\n¿Desea realizar otra operación (S/N)?");
-                    salir = input.next().charAt(0);
                     break;
                 case 5:
                     OrdenarAutos(autos);
-                    System.out.println("\n¿Desea realizar otra operación (S/N)?");
-                    salir = input.next().charAt(0);
                     break;
                 case 6:
-                    System.out.println("\nIngrese el índice del auto que desea eliminar: ");
                     for (int i = 0; i < autos.size(); i++){
                         System.out.println(i + "." + autos.get(i));
                     }
+                    System.out.println("\nIngrese el índice del auto que desea eliminar: ");
                     int indice = input.nextInt();
+                    input.nextLine();
                     System.out.print("\nIngrese el nuevo nombre del auto: ");
-
-                    String nuevoAuto = input.next();
+                    String nuevoAuto = input.nextLine();
 
                     EditarAuto(autos, indice, nuevoAuto);
-                    System.out.println("\n¿Desea realizar otra operación (S/N)?");
-                    salir = input.next().charAt(0);
                     break;
                 case 7:
                     System.out.println("\nSaliendo...");
                     break;
             }
 
-        }while (opcion <= 7 && (salir == 'S' || salir == 's'));
+        }while (opcion != 7 );
 
     }
 }
